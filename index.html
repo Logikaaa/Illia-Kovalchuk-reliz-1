@@ -1,0 +1,170 @@
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTO_SHOP</title>
+    <style>
+         #cart-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 620px;
+      height: 722px;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      border-radius: 10px;
+      padding: 20px;
+      display: none;
+      z-index: 1000;
+    }
+    #cart-popup h2 {
+      margin-top: 0;
+    }
+    #cart-popup .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      color: red;
+      font-weight: bold;
+    }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+
+        .logo {
+            height: 150px;
+        }
+
+        .cart {
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            padding: 0 100px 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .card h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+        }
+
+        .card p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .buy-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .phone {
+            text-align: center;
+            font-size: 22px;
+            color: red;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src=c:\Users\user\Pictures\Trw_500x500-removebg-preview.png alt="TRW Logo"
+            class="logo">
+        <div class="cart">0 🛒 Кошик</div>
+    </header>
+
+    <h1>MOTO_SHOP</h1>
+
+    <section class="grid">
+        <div class="card">
+            <img src="c:\Users\user\Pictures\images__1_-removebg-preview.png" alt="Yamaha R1">
+            <h3>Yamaha R1</h3>
+            <p>2024р 600см</p>
+            <p class="price">192000 грн</p>
+            <button class="buy-btn">Купити</button>
+        </div>
+
+        <div class="card">
+            <img src="c:\Users\user\Pictures\kpr8-removebg-preview.png" alt="lifan kpr 250">
+            <h3>lifan kpr 250</h3>
+            <p>2023р 250см</p>
+            <p class="price">125000 грн</p>
+            <button class="buy-btn">Купити</button>
+        </div>
+
+        <div class="card">
+            <img src="c:\Users\user\Pictures\Ducati-Superleggera-V4_UC145951_High-removebg-preview.png" alt="Ducati Panigale V4">
+            <h3>Ducati Panigale V4</h3>
+            <p>2016р 500см</p>
+            <p class="price">192000 грн</p>
+            <button class="buy-btn">Купити</button>
+        </div>
+
+        <div class="card">
+            <img src=c:\Users\user\Pictures\25EX500J_44SRD1DRF3CG_A-1066x800_150-800x800w-removebg-preview.png alt="Kawasaki Ninja">
+            <h3>Kawasaki Ninja</h3>
+            <p>2019р 500см</p>
+            <p class="price">137000 грн</p>
+            <button class="buy-btn">Купити</button>
+        </div>
+    </section>
+
+    <div class="phone">+380688123626</div>
+ </script>
+    
+</body>
+
+</html>

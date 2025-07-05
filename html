@@ -1,0 +1,138 @@
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTO_SHOP</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .buy-btn {
+            transition: transform 0.3s ease;
+        }
+
+        .buy-btn:hover {
+            transform: scale(1.1);
+        }
+
+        #cart-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 620px;
+            height: 722px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            display: none;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        #cart-popup h2 {
+            margin-top: 0;
+        }
+
+        #cart-popup .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            color: red;
+            font-weight: bold;
+        }
+
+        #cart-items {
+            margin-top: 20px;
+        }
+
+        #cart-items li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/TRW_Automotive_logo.svg" alt="TRW Logo"
+            class="logo">
+        <div class="cart" onclick="openCart()">🛒 Кошик</div>
+    </header>
+
+    <h1>MOTO_SHOP</h1>
+
+    <section class="grid">
+        <div class="card">
+            <img src="https://i.imgur.com/z6b06Zy.png" alt="Yamaha R1">
+            <h3>Yamaha R1</h3>
+            <p>2024р 600см</p>
+            <p class="price">192000 грн</p>
+            <button class="buy-btn" onclick="addToCart('Yamaha R1', '192000 грн')">Купити</button>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/tE2NfBh.png" alt="lifan kpr 250">
+            <h3>lifan kpr 250</h3>
+            <p>2024р 250см</p>
+            <p class="price">125000 грн</p>
+            <button class="buy-btn" onclick="addToCart('lifan kpr 250', '125000 грн')">Купити</button>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/KzEJuVz.png" alt="Ducati Panigale V4">
+            <h3>Ducati Panigale V4</h3>
+            <p>2016р 500см</p>
+            <p class="price">192000 грн</p>
+            <button class="buy-btn" onclick="addToCart('Ducati Panigale V4', '192000 грн')">Купити</button>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/IxdJOkU.png" alt="Kawasaki Ninja">
+            <h3>Kawasaki Ninja</h3>
+            <p>2024р 500см</p>
+            <p class="price">137000 грн</p>
+            <button class="buy-btn" onclick="addToCart('Kawasaki Ninja', '137000 грн')">Купити</button>
+        </div>
+    </section>
+
+    <div class="phone">+380688123626</div>
+
+    <div id="cart-popup">
+        <span class="close-btn" onclick="closeCart()">×</span>
+        <h2>Ваш кошик</h2>
+        <ul id="cart-items"></ul>
+    </div>
+
+    <script>
+        const cartItems = [];
+
+        function addToCart(name, price) {
+            cartItems.push(`${name} — ${price}`);
+            updateCart();
+        }
+
+        function updateCart() {
+            const list = document.getElementById("cart-items");
+            list.innerHTML = "";
+            cartItems.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = item;
+                list.appendChild(li);
+            });
+        }
+
+        function openCart() {
+            document.getElementById("cart-popup").style.display = "block";
+        }
+
+        function closeCart() {
+            document.getElementById("cart-popup").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
