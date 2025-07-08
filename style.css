@@ -1,7 +1,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #fdeeee;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -14,7 +14,7 @@ header {
 }
 
 .logo {
-    height: 50px;
+    height: 150px;
 }
 
 .cart {
@@ -29,7 +29,13 @@ h1 {
     font-size: 32px;
     font-weight: bold;
 }
-
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(234, 45, 45);
+}
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
